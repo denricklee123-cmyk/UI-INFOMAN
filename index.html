@@ -61,6 +61,8 @@
             <input type="password" id="user-password" name="password" required>
           </div>
 
+          <p class="forgot-link"><a href="#forgot">Forgot password?</a></p>
+
           <div class="btn-center">
             <button type="submit" class="btn btn-light">Login</button>
           </div>
@@ -86,6 +88,8 @@
             <label for="lib-password">Password</label>
             <input type="password" id="lib-password" name="password" required>
           </div>
+
+          <p class="forgot-link"><a href="#forgot">Forgot password?</a></p>
 
           <div class="btn-center">
             <button type="submit" class="btn btn-light">Login</button>
@@ -146,6 +150,141 @@
           Already have an account?
           <a href="#login-user">Login Now</a>
         </p>
+      </section>
+
+      <section id="forgot" class="view card card-reset">
+        <svg class="icon icon-blue" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" d="M17 9V7a5 5 0 0 0-10 0v2H5v13h14V9h-2zM9 7a3 3 0 0 1 6 0v2H9V7zm3 8a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+        </svg>
+        <h2 class="card-title title-blue">Forgot Password?</h2>
+        <p class="card-note">Don't worry! Enter your registered email address and we'll send you a verification code.</p>
+        <hr class="divider">
+
+        <div class="form-stack">
+          <label for="forgot-email">Registered Email Address</label>
+          <input type="email" id="forgot-email" name="email" placeholder="Enter your registered email address here">
+          <a class="btn btn-block btn-navy" href="#verify">Send Verification</a>
+        </div>
+
+        <a class="text-link" href="#login-user">Back to Login</a>
+      </section>
+
+      <section id="verify" class="view card card-reset">
+        <svg class="icon icon-stroke icon-blue" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2.5" y="4.5" width="19" height="15" rx="2"/>
+          <path d="M3 6.5l9 7 9-7"/>
+        </svg>
+        <h2 class="card-title title-blue">Verify Your Email</h2>
+        <p class="card-note">We've sent a 6-digit verification code to your registered email address.</p>
+        <p class="masked-email">pr***@example.com</p>
+
+        <div class="form-stack">
+          <fieldset class="code-group">
+            <legend>Enter Verification Code</legend>
+            <div class="code-row">
+              <input class="code-box" type="text" inputmode="numeric" maxlength="1" placeholder="-" aria-label="Digit 1">
+              <input class="code-box" type="text" inputmode="numeric" maxlength="1" placeholder="-" aria-label="Digit 2">
+              <input class="code-box" type="text" inputmode="numeric" maxlength="1" placeholder="-" aria-label="Digit 3">
+              <input class="code-box" type="text" inputmode="numeric" maxlength="1" placeholder="-" aria-label="Digit 4">
+              <input class="code-box" type="text" inputmode="numeric" maxlength="1" placeholder="-" aria-label="Digit 5">
+              <input class="code-box" type="text" inputmode="numeric" maxlength="1" placeholder="-" aria-label="Digit 6">
+            </div>
+          </fieldset>
+
+          <p class="card-note center">Didn't receive the code?</p>
+          <p class="card-note center"><a href="#verify">Resend Code</a></p>
+
+          <a class="btn btn-block btn-navy" href="#new-password">Verify Code</a>
+        </div>
+
+        <a class="text-link" href="#login-user">Back to Login</a>
+      </section>
+
+      <section id="code-expired" class="view card card-reset">
+        <svg class="icon icon-orange" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" d="M12 2.5 1.5 21h21L12 2.5zM11 9h2v6h-2V9zm0 7.5h2v2h-2v-2z"/>
+        </svg>
+        <h2 class="card-title title-orange">Verification Code Expired</h2>
+        <p class="card-note">Your verification code has expired. Please request a new code.</p>
+
+        <div class="form-stack">
+          <fieldset class="code-group">
+            <legend>Enter Verification Code</legend>
+            <div class="code-row">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 1">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 2">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 3">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 4">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 5">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 6">
+            </div>
+          </fieldset>
+          <p class="msg msg-orange">This verification code is no longer valid.</p>
+          <a class="btn btn-block btn-grey" href="#verify">Request New Code</a>
+        </div>
+
+        <a class="text-link" href="#login-user">Back to Login</a>
+      </section>
+
+      <section id="code-invalid" class="view card card-reset">
+        <svg class="icon icon-stroke icon-x icon-red" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 5l14 14M19 5L5 19"/>
+        </svg>
+        <h2 class="card-title title-red">Invalid Verification Code</h2>
+        <p class="card-note">The code you entered is incorrect. Please check the code and try again.</p>
+
+        <div class="form-stack">
+          <fieldset class="code-group">
+            <legend>Enter Verification Code</legend>
+            <div class="code-row">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 1">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 2">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 3">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 4">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 5">
+              <input class="code-box" type="text" value="1" readonly aria-label="Digit 6">
+            </div>
+          </fieldset>
+          <p class="msg msg-red">Incorrect code. Please try again.</p>
+          <a class="btn btn-block btn-navy" href="#verify">Request New Code</a>
+        </div>
+
+        <a class="text-link" href="#login-user">Back to Login</a>
+      </section>
+
+      <section id="new-password" class="view card card-reset">
+        <svg class="icon icon-blue" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" d="M17 9V7a5 5 0 0 0-10 0v2H5v13h14V9h-2zM9 7a3 3 0 0 1 6 0v2H9V7zm3 8a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+        </svg>
+        <h2 class="card-title title-blue">Create New Password</h2>
+
+        <div class="form-stack">
+          <label for="new-pass">New Password</label>
+          <input type="password" id="new-pass" name="new_password" placeholder="Enter New Password">
+
+          <label for="confirm-pass">Confirm New Password</label>
+          <input type="password" id="confirm-pass" name="confirm_password" placeholder="Re-enter New Password">
+
+          <div class="requirements">
+            <p>Password Requirements</p>
+            <ul>
+              <li>At least 8 characters</li>
+              <li>At least one uppercase and lowercase letter</li>
+              <li>At least one number</li>
+            </ul>
+          </div>
+
+          <a class="btn btn-block btn-navy" href="#reset-success">Reset Password</a>
+        </div>
+      </section>
+
+      <section id="reset-success" class="view card card-reset">
+        <svg class="icon icon-green" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" d="M17 9V7a5 5 0 0 0-10 0v2H5v13h14V9h-2zM9 7a3 3 0 0 1 6 0v2H9V7zm3 8a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+        </svg>
+        <h2 class="card-title title-green">Password Reset Successful!</h2>
+        <p class="card-note">Your password has been updated. You can now log in using your new password.</p>
+        <a class="btn btn-block btn-navy" href="#login-user">Back to Login</a>
       </section>
 
     </main>
