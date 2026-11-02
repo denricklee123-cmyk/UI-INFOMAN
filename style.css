@@ -7,6 +7,9 @@
   --purple: #6a56c9;
   --lavender: #d6cff3;
   --page-bg: #eef0f3;
+  --orange: #f4a032;
+  --red: #ee3339;
+  --green: #10b95c;
 }
 
 * {
@@ -176,7 +179,8 @@ a:hover {
 .btn:focus-visible,
 input:focus-visible,
 select:focus-visible,
-a:focus-visible {
+a:focus-visible,
+.link-button:focus-visible {
   outline: 3px solid var(--navy);
   outline-offset: 3px;
 }
@@ -197,6 +201,28 @@ a:focus-visible {
 
 .btn-light:active {
   box-shadow: 0 2px 0 var(--sky-dark);
+}
+
+.btn-navy {
+  background: var(--royal);
+  border: 1px solid #002b6b;
+}
+
+.btn-grey {
+  background: #d9d9d9;
+  color: #555;
+  border: 1px solid #999;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  margin: 18px auto 0;
+  padding: 9px 20px 7px;
+  border-radius: 14px;
+  font-size: 1.9rem;
+  text-align: center;
 }
 
 .btn-row {
@@ -259,6 +285,12 @@ a:focus-visible {
   cursor: pointer;
 }
 
+.forgot-link {
+  text-align: right;
+  font-size: 0.9rem;
+  margin: -2px 0 6px;
+}
+
 .switch-text {
   font-size: 1rem;
   line-height: 1.2;
@@ -272,6 +304,207 @@ a:focus-visible {
 .back-link {
   margin-top: 10px;
   font-size: 0.85rem;
+}
+
+.card-reset {
+  padding: 22px 36px 22px;
+}
+
+.card-reset .card-title {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 4px;
+  fill: currentColor;
+}
+
+.icon-stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-x {
+  stroke-width: 3.5;
+}
+
+.icon-blue {
+  color: var(--royal);
+}
+
+.icon-orange {
+  color: var(--orange);
+}
+
+.icon-red {
+  color: var(--red);
+}
+
+.icon-green {
+  color: var(--green);
+}
+
+.title-blue {
+  color: var(--royal);
+}
+
+.title-orange {
+  color: var(--orange);
+}
+
+.title-red {
+  color: var(--red);
+}
+
+.title-green {
+  color: var(--green);
+}
+
+.card-note {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card-note.center {
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.masked-email {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #999;
+  margin: 14px 0;
+}
+
+.form-stack {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-stack label {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 10px 0 6px;
+}
+
+.form-stack input {
+  width: 100%;
+  height: 44px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0 16px;
+  border: 1px solid #888;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.code-group {
+  border: none;
+  min-width: 0;
+  margin: 6px 0 8px;
+}
+
+.code-group legend {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+}
+
+.code-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.form-stack .code-box {
+  width: 48px;
+  height: 56px;
+  padding: 0;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.link-button {
+  display: block;
+  margin: 0 auto 10px;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--royal);
+  cursor: pointer;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+.msg {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 4px 0 12px;
+}
+
+.msg[hidden] {
+  display: none;
+}
+
+.msg-orange {
+  color: var(--orange);
+}
+
+.msg-red {
+  color: var(--red);
+}
+
+.requirements {
+  background: #e6f0fa;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 14px 0 10px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.requirements ul {
+  list-style: none;
+}
+
+.requirements li::before {
+  content: "\2022\00a0";
+}
+
+.text-link {
+  display: block;
+  margin-top: 14px;
+  font-size: 1.05rem;
 }
 
 .deco {
@@ -321,8 +554,9 @@ a:focus-visible {
   }
 
   .card-title,
-  .card-subtitle {
-    font-size: 1.4rem;
+  .card-subtitle,
+  .card-reset .card-title {
+    font-size: 1.3rem;
   }
 
   .btn-row {
@@ -346,6 +580,11 @@ a:focus-visible {
 
   .btn-end {
     text-align: center;
+  }
+
+  .form-stack .code-box {
+    width: 40px;
+    height: 48px;
   }
 
   .deco {
